@@ -1,26 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import { categories } from '../api';
+import Row from './components/Row'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-        <u>
-          
-          Edit <code>src/App.js</code> and save to reload.
-        </u>
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-          >
-          Learn React
-        </a>
-      </header>
+    <div>
+
+        {categories.map( (category) => {
+
+            return  <Row 
+                        key = {category.name}
+                        title = {category.name}
+                        isLarge = {category.name}
+                       
+             />
+
+        })}
+
     </div>
   );
 }
