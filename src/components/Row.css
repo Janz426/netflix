@@ -1,16 +1,30 @@
-
-
-.large {
-    
-    width: 300px;
-    padding-left: 1%;
-    padding-block: 1%;
-    flex-direction: 'row';
-    align-items: 'center';
-
+.row-container {
+    margin-left: 20px;
+    color: white;
 }
 
-.normal {
-    width: 20%;
-     
+row.cards {
+    display: flex;
+    overflow-y:hidden ;
+    overflow-x:scroll ;
+    padding: 20px;
+}
+
+.movie-card {
+    object-fit: contain;
+    width: 100%;
+    max-height: 100px;
+    margin-bottom: 10px;
+    transition: transform 450ms;
+}
+.movie-card-large {
+    object-fit: contain;
+    width: 100%;
+    max-height: 250px;
+    margin-bottom: 10px;
+    transition: transform 450ms;
+}
+
+.movie-card:hover{
+    transform: scale(1.08);
 }
